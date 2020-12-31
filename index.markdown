@@ -23,6 +23,13 @@ Medical Image Datasets and Challenges for Machine Learning: A Review. Johann Li.
 
 ## 数据集目录：
 
-[Hecd & Neck](head-neck.html)
+* [Hecd & Neck](head-neck.html)
+
+* [Chest & Abdomen](chest-abdomen.html)
+
+* [Pathology & Blood](pathology-blood.html)
+
+* [Other Subjects](others.html)
+
 
 <!-- 自动生成 -->
