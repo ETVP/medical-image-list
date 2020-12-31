@@ -12,7 +12,7 @@ def replace_href(cell):
 
     value = re.sub(r"\\href{(.*?)}{(.*?)}", r"[\2](\1)", value)
     value = re.sub(r"\\cite{(.*?)}", r"", value)
-    value = re.sub(r"\\textbf{(.*?)}", r"**\1**", value)
+    value = re.sub(r"\\textbf{(.*?)}", r"<strong>\1<strong>", value)
     value = re.sub(r"\\textsc{(.*?)}", r'<font style="font-variant: small-caps">\1</font>', value)
     value = re.sub(r"\\dataindex{(.*?)}", r"\1", value)
     value = re.sub(r"\\rowcolor{(.*?)}", r"", value)

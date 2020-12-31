@@ -1,3 +1,7 @@
+---
+layout: home
+---
+
 A list of medical image datasets and challenges for deep learning
 ==================================================================
 
@@ -19,6 +23,6 @@ Medical Image Datasets and Challenges for Machine Learning: A Review. Johann Li.
 
 ## 数据集目录：
 
-[Hecd & Neck](head-neck)
+[Hecd & Neck](head-neck.html)
 
 <!-- 自动生成 -->

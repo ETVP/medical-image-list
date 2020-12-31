@@ -1,5 +1,7 @@
-Head & Neck
-===============
+---
+layout: page
+title: Head & Neck
+---
 
 
 ## Datasets and challenges summary of the basic brain image analysis.
