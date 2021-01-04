@@ -3,6 +3,7 @@ layout: page
 title: Other Subjects
 ---
 
+![Other](figures/other.png)
 
 ## Datasets and challenges summary of bone-concerned tasks.
 

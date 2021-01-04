@@ -3,6 +3,8 @@ layout: page
 title: Head & Neck
 ---
 
+![Head & Neck](figures/head.png)
+
 ## Datasets and challenges summary of the basic brain image analysis.
 
 Most of these datasets and challenges are the segmentation tasks, while some of the other tasks are about reconstruction. WM is short for white matter; GM is short for graymatter; CSF is short for cerebrospinal fluid.

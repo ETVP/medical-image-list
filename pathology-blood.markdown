@@ -4,6 +4,8 @@ title: Pathology & Blood
 ---
 
 
+![Pathology & Blood](figures/pathology-blood.png)
+
 ## Datasets and challenges summary of pathology-concerned tasks.
 
 Tasks include classification (**C**), segmentation (**S**), detection (**D**), tracking (**2**), counting (**1**), location (**3**), nonlinear image registration (**4**), visual question answering (**5**).

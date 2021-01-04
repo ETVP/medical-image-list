@@ -3,6 +3,8 @@ layout: page
 title: Chest & Abdomen
 ---
 
+![Chest & Abdomen](figures/chest-abdomen.png)
+
 ## Datasets and challenges summary of the chest and abdomen organ segmentation tasks.
 
 

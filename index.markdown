@@ -21,6 +21,8 @@ Medical Image Datasets and Challenges for Machine Learning: A Review. Johann Li.
 }
 ```
 
+![Summary](figures/summary.png)
+
 ## 数据集目录：
 
 * [Hecd & Neck](head-neck.html)
