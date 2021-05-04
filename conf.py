@@ -21,6 +21,7 @@ project = 'Medical image datasets list'
 copyright = '2021, Johann Li <me@qinka.pro>'
 author = 'Johann Li <me@qinka.pro>'
 
+master_doc = 'readme'
 
 # -- General configuration ---------------------------------------------------
 
