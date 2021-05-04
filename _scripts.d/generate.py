@@ -13,7 +13,7 @@ def replace_latex(cell, format = None, ignore_bf = True):
     else:
         value = str(cell.value)
 
-    value = re.sub(r"\\href{(.*?)}{(.*?)}", r"[\2](\1)", value).strip()
+    value = re.sub(r"\\href{(.*?)}{(.*?)}", r"`\2 <\1>`_", value).strip()
     value = re.sub(r"\\cite{(.*?)}", r"", value).strip()
     value = re.sub(r"\\textbf{(.*?)}", r"\1" if ignore_bf else r"**\1**", value).strip()
     value = re.sub(r"\\textsc{(.*?)}", r'\1', value).strip()
@@ -47,17 +47,21 @@ def generate_table(sheet, idxcvt = idxId):
     B
     """
 
-    subsection_title = f"\n## {replace_latex(sheet.cell(0,0), ignore_bf = False)}\n"
+    subsub_title = replace_latex(sheet.cell(0,0), ignore_bf = False)
+    subsub_line  = "`" * len(subsub_title)
+    subsection_title = f"\n{subsub_title}\n{subsub_line}\n"
     content          = f"{replace_latex(sheet.cell(0,1), ignore_bf = False)}\n"
 
     table_build = [subsection_title, content]
 
-    table_build.append('|' + '|'.join(map(lambda cell: replace_latex(cell, '<span style="font-variant: small-caps; font-weight:bold;"> {value} </span>'), sheet.row(1))) + '|')
-    table_build.append('|' + '|'.join(['-------'] * len(sheet.row(1))) + '|')
+    table_build.append('+' + '+'.join(['-----------'] * len(sheet.row(1))) + '+')
+    table_build.append('| ' + ' | '.join(map(lambda cell: replace_latex(cell, '**{value}**'), sheet.row(1))) + ' |')
+    table_build.append('+' + '+'.join(['==========='] * len(sheet.row(1))) + '+')
     i = 2
     while i < sheet.nrows:
         # print('Row', i, file=sys.stderr)
-        table_build.append('|' + idxcvt(sheet.cell_value(i,0)) + '|' + '|'.join(map(lambda cell: replace_latex(cell), sheet.row(i)[1:])) + '|')
+        table_build.append('| ' + idxcvt(sheet.cell_value(i,0)) + ' | ' + ' | '.join(map(lambda cell: replace_latex(cell), sheet.row(i)[1:])) + ' |')
+        table_build.append('+' + '+'.join(['-----------'] * len(sheet.row(1))) + '+')
         i += 1
 
     return '\n'.join(table_build)
@@ -73,9 +77,13 @@ if __name__ == "__main__":
     # book = xlrd.open_workbook('Z:\\documents\\Medical dataset survey\\website\\pathology-blood.xlsx')
     book = xlrd.open_workbook('Z:\\documents\\Medical dataset survey\\website\\others.xlsx')
 
+    file = open('temp-rst', 'w', encoding = 'utf-8')
+
     for i in range(book.nsheets):
         # print('Sheet', i, file=sys.stderr)
         sheet = book.sheet_by_index(i)
         table = generate_table(sheet, idxcvt)
         # import pdb; pdb.set_trace()
-        print(table)
+        print(table, file=sys.stderr)
+        file.write(table)
+        file.write('\n\n')

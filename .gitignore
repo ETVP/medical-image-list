@@ -4,3 +4,7 @@ _site
 .jekyll-metadata
 vendor
 .vscode
+docs/_build/
+_build/
+_scripts.d/template
+_scripts.d/temp*
