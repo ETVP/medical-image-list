@@ -38,6 +38,17 @@ papers was helpful to you, please cite the following paper:**
    pathology-blood
    others
 
+
+- `Head & Neck`_
+- `Chest & Adbdomen`_
+- `Pathology & Blood`_
+- `Others`_
+
+.. _`Head & Neck`: head-neck.rst
+.. _`Chest & Adbdomen`: chest-abdomen.rst
+.. _`Pathology & Blood`: pathology-blood.rst
+.. _`Others`: others.rst
+
 |Creative Commons License|
 This work is licensed under a `Creative Commons
 Attribution-NonCommercial-ShareAlike 4.0 International License`_.
