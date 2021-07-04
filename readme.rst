@@ -12,16 +12,23 @@ papers was helpful to you, please cite the following paper:**
 **如果这个网页中的内容对你有帮助，或者我们的论文
 对你有帮助，请引用如下论文：**
 
-::
 
-   Medical Image Datasets and Challenges for Machine Learning: A Review. Johann Li. In press.
+
+   Johann Li, Guangming Zhu, Cong Hua, Mingtao Feng, BasheerBennamoun, Ping Li, Xiaoyuan Lu, Juan Song, Peiyi Shen, Xu Xu, Lin Mei, Liang Zhang, Syed Afaq Ali Shah, and Mohammed Bennamoun. 2021. **A Systematic Collection of Medical Image Datasets for Deep Learning**. (June 2021). Retrieved from http://arxiv.org/abs/2106.12864
 
 .. code:: bibtex
 
-   @article{Li2020,
-       author = {Li, Johann},
-       title = {{Medical Image Datasets and Challenges for Machine Learning: A Review}}
-   }
+   @article{Li2021,
+      archivePrefix = {arXiv},
+      arxivId = {2106.12864},
+      author = {Li, Johann and Zhu, Guangming and Hua, Cong and Feng, Mingtao and BasheerBennamoun and Li, Ping and Lu, Xiaoyuan and Song, Juan and Shen, Peiyi and Xu, Xu and Mei, Lin and Zhang, Liang and Shah, Syed Afaq Ali and Bennamoun, Mohammed},
+      eprint = {2106.12864},
+      month = {jun},
+      title = {{A Systematic Collection of Medical Image Datasets for Deep Learning}},
+      url = {http://arxiv.org/abs/2106.12864},
+      year = {2021}
+      }
+
 
 .. figure:: figures/summary.png
    :alt: Summary
